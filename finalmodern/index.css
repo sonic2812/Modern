@@ -1,0 +1,909 @@
+                                            body {
+                                            font-size: 20px;
+                                            font-family: 'Bitter', serif;
+                                            overflow: auto;
+                                        }
+                                        /* Создание страницы модельный ряд */
+                                        /* Создание хедера */
+                                        
+                                        .header>a {
+                                            text-decoration: none;
+                                            text-transform: uppercase;
+                                            color: black;
+                                            margin: 2rem;
+                                            padding: 4px;
+                                            margin-left: 1rem;
+                                            border: 1px solid white;
+                                            font-size: 1.5rem;
+                                        }
+                                        
+                                        .header>a:hover {
+                                            border: 1px solid #B37716;
+                                            color: #B37716;
+                                            background-color: white;
+                                            border-radius: 5px;
+                                            transition: all 0.3s ease;
+                                        }
+                                        
+                                        .header {
+                                            background-color: white;
+                                            margin-top: 1rem;
+                                            margin-bottom: 1rem;
+                                            position: relative;
+                                        }
+                                        
+                                        .wrapper {
+                                            max-width: 1300px;
+                                            text-align: center;
+                                            margin-left: auto;
+                                            margin-right: auto;
+                                        }
+                                        
+                                        .solid {
+                                            background-color: white;
+                                            max-width: 1300px;
+                                            border-bottom: 1px solid #B37716;
+                                            margin: 3px;
+                                            margin: 0 auto;
+                                            left: 0;
+                                            right: 0;
+                                            overflow: visible;
+                                            z-index: 2;
+                                        }
+                                        
+                                        .header_fixed {
+                                            position: fixed;
+                                            animation-name: show_header;
+                                            animation-duration: 0.8s;
+                                            margin: 0 auto;
+                                            top: 0;
+                                        }
+                                        
+                                        @keyframes show_header {
+                                            0% {
+                                                opacity: 0;
+                                                top: -10px;
+                                            }
+                                            100% {
+                                                opacity: 1;
+                                                top: 0;
+                                            }
+                                        }
+                                        /* Создание грид */
+                                        
+                                        .bodygrid {
+                                            margin-top: 10rem;
+                                            justify-content: center;
+                                            margin: 1rem;
+                                            display: grid;
+                                            grid-template-columns: repeat(4, minmax(5rem, 20rem));
+                                            grid-template-rows: repeat(10, minmax(7rem, 25rem));
+                                        }
+                                        
+                                        .greed {
+                                            justify-content: center;
+                                            margin: 1rem;
+                                            margin: 1rem;
+                                            position: relative;
+                                        }
+                                        
+                                        .slide1:hover {
+                                            filter: alpha (Opacity=25);
+                                            opacity: 0.5;
+                                            cursor: pointer;
+                                            transition: all 0.3s ease;
+                                        }
+                                        /* Создание футера */
+                                        
+                                        .footer2 {
+                                            min-height: 5rem;
+                                            max-height: 10rem;
+                                            border: 1px solid #B37716;
+                                            background: rgb(0, 0, 0);
+                                            margin-top: auto;
+                                        }
+                                        
+                                        .first {}
+                                        
+                                        .second {}
+                                        /* Создание модального окна */
+                                        
+                                        #popup {
+                                            position: fixed;
+                                            width: 100%;
+                                            height: 100%;
+                                            background-color: rgba(0, 0, 0, 0.8);
+                                            top: 0;
+                                            left: 0;
+                                            overflow-y: auto;
+                                            overflow-x: hidden;
+                                            transition: all 0.5s ease 0.1s;
+                                            display: none;
+                                            z-index: 2;
+                                            animation-name: show_popap;
+                                        }
+                                        
+                                        #popup_body {
+                                            justify-content: center;
+                                            align-items: center;
+                                            display: flex;
+                                            min-height: 100%;
+                                            padding: 1.5rem 1rem;
+                                        }
+                                        
+                                        #popup_body:hover {
+                                            cursor: pointer;
+                                            transition: all 0.3s ease;
+                                        }
+                                        
+                                        #popup_content {
+                                            border-radius: 5px;
+                                            background-color: #fff;
+                                            color: black;
+                                            max-width: 30rem;
+                                            max-height: 35rem;
+                                            min-height: 35rem;
+                                            min-width: 30rem;
+                                            padding: 1rem;
+                                            position: relative;
+                                            border: 1px solid #B37716;
+                                        }
+                                        
+                                        #popup_content:hover {
+                                            cursor: auto;
+                                        }
+                                        
+                                        #popup_close {
+                                            position: absolute;
+                                            right: -1rem;
+                                            top: -1rem;
+                                            font-size: 1.5rem;
+                                            color: black;
+                                            text-decoration: none;
+                                            border-radius: 100%;
+                                            border: 2px solid black;
+                                            padding: 0 .5rem;
+                                            background-color: rgba(255, 255, 255, 1);
+                                        }
+                                        
+                                        #popup_close:hover {
+                                            color: #B37716;
+                                            border: 1px solid #B37716;
+                                        }
+                                        /* создание контента в грид */
+                                        
+                                        #imgtext {
+                                            max-width: 30rem;
+                                            max-height: 35rem;
+                                            min-height: 35rem;
+                                            min-width: 30rem;
+                                            display: flex;
+                                            justify-content: center;
+                                            position: relative;
+                                        }
+                                        
+                                        .slide1 {
+                                            width: 100%;
+                                            height: 100%;
+                                            position: absolute;
+                                            /* background-image: url(/finalmodern/content/slide1/slide1.jpeg); */
+                                            object-fit: cover;
+                                            background-repeat: no-repeat;
+                                            background-size: cover;
+                                        }
+                                        
+                                        #popup_image1 {
+                                            width: 100%;
+                                            height: 100%;
+                                            /* background-image: url(/finalmodern/content/slide1/slide1.jpeg); */
+                                            background-repeat: no-repeat;
+                                            background-size: cover;
+                                            object-fit: cover;
+                                            position: absolute;
+                                        }
+                                        
+                                        #popup_text1 {
+                                            max-width: 20rem;
+                                            min-width: 20rem;
+                                            min-height: 30rem;
+                                            background-color: black;
+                                            color: white;
+                                        }
+                                        
+                                        #popup_image1:hover {
+                                            opacity: 0.5;
+                                            transition: all 0.3s ease;
+                                        }
+                                        /* Создание страницы контакты */
+                                        
+                                        .contacts {
+                                            display: flex;
+                                            justify-content: center;
+                                            justify-content: center;
+                                            margin: 0 auto;
+                                            margin-bottom: 3rem;
+                                        }
+                                        
+                                        .boxis {
+                                            min-width: 30rem;
+                                            font-size: 2rem;
+                                            right: 0;
+                                            text-align: center;
+                                            margin: 3% auto;
+                                            width: 100%;
+                                            height: 100%;
+                                            /* border: 1px solid #B37716; */
+                                        }
+                                        
+                                        #contactsphoto {
+                                            /* border-left: 1px solid #B37716; */
+                                            margin-top: 3%;
+                                            min-width: 30rem;
+                                            min-height: 40rem;
+                                            /* border: 1px solid #B37716; */
+                                            background-image: url(content/contacts.jpeg);
+                                            object-fit: cover;
+                                            background-repeat: no-repeat;
+                                            background-size: cover;
+                                        }
+                                        
+                                        #contactsya {
+                                            text-decoration: none;
+                                            margin-bottom: 2rem;
+                                        }
+                                        
+                                        #contactsya:hover {
+                                            transition: all 0.3s ease;
+                                            border-radius: 3px;
+                                            padding: 15px;
+                                            border: 1px solid #B37716;
+                                            transition: all 0.3s ease;
+                                        }
+                                        /* Создание главной страницы */
+                                        /* Верхние 2 фотографии */
+                                        
+                                        .zeroblock {
+                                            /* justify-content: center; */
+                                            /* min-width: 70rem; */
+                                            /* min-height: 24rem; */
+                                            /* margin: 1rem auto; */
+                                            /* text-align: center; */
+                                            /* align-items: center; */
+                                            /* background-image: url(content/мейнфотка.jpeg); */
+                                            /* background-repeat: no-repeat; */
+                                            /* background-size: cover; */
+                                            /* object-fit: cover; */
+                                        }
+                                        
+                                        #firstblock {
+                                            height: auto;
+                                            width: auto;
+                                            display: flex;
+                                            justify-content: center;
+                                            margin: 0.25rem;
+                                        }
+                                        
+                                        .firstimage1 {
+                                            max-width: 35rem;
+                                            max-height: 25rem;
+                                            /* border: 2px solid #B37716;
+        margin-right: 1rem; */
+                                            /* background-image: url(content/slide38.jpeg); */
+                                            background-repeat: no-repeat;
+                                            background-size: cover;
+                                            object-fit: cover;
+                                        }
+                                        
+                                        .secondimage1 {
+                                            max-width: 35rem;
+                                            max-height: 25rem;
+                                            /* border: 2px solid #B37716; */
+                                            margin-left: 1rem;
+                                            /* background-image: url(content/slide38.jpeg); */
+                                            background-repeat: no-repeat;
+                                            background-size: cover;
+                                            object-fit: cover;
+                                        }
+                                        /* Пояс с кредитованием */
+                                        
+                                        .body2 {
+                                            margin: 0.25em;
+                                            margin-left: auto;
+                                            margin-right: auto;
+                                        }
+                                        
+                                        #box2 {
+                                            margin: 0.5rem;
+                                            max-height: 5rem;
+                                            border: 1px solid #B37716;
+                                            box-sizing: padding-box;
+                                            overflow: hidden;
+                                            background: #F07427;
+                                            border-radius: 2px;
+                                        }
+                                        
+                                        #box2:hover {
+                                            cursor: pointer;
+                                            transition: all 0.3s ease;
+                                        }
+                                        
+                                        #firstblock2 {
+                                            display: flex;
+                                            padding: 0;
+                                            align-items: center;
+                                            height: 5rem;
+                                        }
+                                        
+                                        .f {
+                                            flex: 3;
+                                            background: black;
+                                            color: #F07427;
+                                            font-size: 2rem;
+                                            align-items: center;
+                                            width: 100%;
+                                            height: 100%;
+                                            text-align: center;
+                                            justify-content: center;
+                                        }
+                                        
+                                        #tre {
+                                            flex: 0.01;
+                                            width: 0rem;
+                                            height: 0rem;
+                                            border-top: 40px solid transparent;
+                                            border-left: 80px solid black;
+                                            border-bottom: 40px solid transparent;
+                                        }
+                                        
+                                        #s {
+                                            flex: 1;
+                                            text-align: center;
+                                            color: #F07427;
+                                            font-size: 1.3rem;
+                                        }
+                                        
+                                        #t {
+                                            color: #F07427;
+                                            flex: 1;
+                                            font-size: .8rem;
+                                            line-height: 10PX;
+                                            border-left: 1px solid white;
+                                            text-align: center;
+                                        }
+                                        /* Нижние 3 фотографии */
+                                        
+                                        #thirdblock {
+                                            display: flex;
+                                            justify-content: center;
+                                        }
+                                        
+                                        .firstimage2 {
+                                            max-width: 23rem;
+                                            max-height: 25rem;
+                                            min-width: 23rem;
+                                            min-height: 25rem;
+                                            margin: .5rem;
+                                            background-image: url(content/slide42.jpg);
+                                            background-repeat: no-repeat;
+                                            background-size: cover;
+                                            object-fit: cover;
+                                            background-position: center;
+                                        }
+                                        
+                                        .secondimage2 {
+                                            max-width: 23rem;
+                                            max-height: 25rem;
+                                            min-width: 23rem;
+                                            min-height: 25rem;
+                                            margin: .5rem;
+                                            background-image: url(content/slide38.jpeg);
+                                            background-repeat: no-repeat;
+                                            background-size: cover;
+                                            object-fit: cover;
+                                            background-position: center;
+                                        }
+                                        
+                                        .thirdimage2 {
+                                            max-width: 23rem;
+                                            max-height: 25rem;
+                                            min-width: 23rem;
+                                            min-height: 25rem;
+                                            margin: .5rem;
+                                            background-image: url(content/slide43.jpg);
+                                            background-repeat: no-repeat;
+                                            background-size: cover;
+                                            object-fit: cover;
+                                            background-position: center;
+                                        }
+                                        
+                                        nav::-webkit-scrollbar {
+                                            width: 0!important;
+                                        }
+                                        /* Убираем скролл */
+                                        
+                                        .lock {}
+                                        /* прижимаем футтер */
+                                        
+                                        .page {
+                                            min-height: 100vh;
+                                            display: flex;
+                                            flex-direction: column;
+                                        }
+                                        /* создание контента ателье */
+                                        
+                                        .fotoatele {
+                                            width: 35rem;
+                                            height: 25rem;
+                                            background-image: url(content/atele.jpg);
+                                            background-repeat: no-repeat;
+                                            background-size: cover;
+                                            object-fit: cover;
+                                            margin-left: 3rem;
+                                            margin-bottom: 3rem;
+                                        }
+                                        
+                                        .textatele {
+                                            margin: 2rem;
+                                        }
+                                        /* иконки соцсетей футер */
+                                        
+                                        #icons2:hover {
+                                            cursor: pointer;
+                                            animation: bounce 1.3s;
+                                            animation-iteration-count: infinite;
+                                            -webkit-animation-iteration-count: infinite;
+                                        }
+                                        
+                                        #icons2 {
+                                            animation-delay: 2s;
+                                        }
+                                        
+                                        @keyframes bounce {
+                                            0%,
+                                            20%,
+                                            60%,
+                                            100% {
+                                                transform: translateY(0);
+                                                transform: translateY(0);
+                                            }
+                                            40% {
+                                                transform: translateY(-12px);
+                                                transform: translateY(-12px);
+                                            }
+                                            80% {
+                                                transform: translateY(-7px);
+                                                transform: translateY(-7px);
+                                            }
+                                        }
+                                        
+                                        #icons:hover {
+                                            cursor: pointer;
+                                            animation: bounce 1.3s;
+                                            animation-iteration-count: infinite;
+                                            -webkit-animation-iteration-count: infinite;
+                                        }
+                                        
+                                        .wrapper1 {
+                                            justify-content: center;
+                                            margin: 1rem;
+                                            display: grid;
+                                            grid-template-columns: repeat(5, minmax(5rem, 20rem));
+                                        }
+                                        
+                                        .gwrap {
+                                            /* justify-content: center; */
+                                            margin-left: 1rem;
+                                            margin-right: 1rem;
+                                            position: relative;
+                                            width: 33%;
+                                        }
+                                        /* адаптация */
+                                        
+                                        #services2 {
+                                            font-size: 2rem;
+                                        }
+                                        
+                                        #services3 {
+                                            font-size: 3rem;
+                                        }
+                                        
+                                        #services4 {
+                                            font-size: 3rem;
+                                        }
+                                        
+                                        @media(max-width:1153px) {
+                                            #services2 {
+                                                font-size: 1.6rem;
+                                            }
+                                            #services3 {
+                                                font-size: 2.7rem;
+                                            }
+                                            #services4 {
+                                                font-size: 2.7rem;
+                                            }
+                                            .boxis {
+                                                font-size: 1.5rem;
+                                            }
+                                            #contactsphoto {
+                                                margin-top: 3rem;
+                                                min-width: 25rem;
+                                                min-height: 30rem;
+                                            }
+                                            #thirdblock {
+                                                display: inline;
+                                                margin: 0 auto;
+                                            }
+                                            .firstimage2 {
+                                                max-width: 35rem;
+                                                max-height: 30rem;
+                                                min-width: 35rem;
+                                                min-height: 30rem;
+                                            }
+                                            .secondimage2 {
+                                                max-width: 35rem;
+                                                max-height: 30rem;
+                                                min-width: 35rem;
+                                                min-height: 30rem;
+                                            }
+                                            .thirdimage2 {
+                                                max-width: 35rem;
+                                                max-height: 30rem;
+                                                min-width: 35rem;
+                                                min-height: 30rem;
+                                            }
+                                            .zeroblock {
+                                                display: none;
+                                            }
+                                            #adaptatio111 {
+                                                display: inline;
+                                                margin: 1rem auto 0 auto;
+                                            }
+                                            .secondimage1 {
+                                                margin: 0 auto;
+                                            }
+                                            #adaptatio1 {
+                                                display: none;
+                                            }
+                                            #s {
+                                                font-size: .8rem;
+                                            }
+                                            #t {
+                                                font-size: .7rem;
+                                            }
+                                            .f {
+                                                font-size: 1.8rem;
+                                                margin: .3rem auto;
+                                            }
+                                        }
+                                        
+                                        @media(min-width:1153px) {
+                                            #adaptatio111 {
+                                                display: none;
+                                            }
+                                            .zeroblock {
+                                                margin-top: 1rem;
+                                            }
+                                        }
+                                        
+                                        @media(min-width:720px) {
+                                            #adaptatio222 {
+                                                display: none;
+                                            }
+                                            #adaptatio11 {
+                                                display: none;
+                                            }
+                                            .zeroblock {
+                                                margin-top: 1rem;
+                                            }
+                                        }
+                                        
+                                        @media(min-width:540px) {
+                                            #adaptatio333 {
+                                                display: none;
+                                            }
+                                            #adaptatio22 {
+                                                display: none;
+                                            }
+                                            .zeroblock {
+                                                margin-top: 1rem;
+                                            }
+                                        }
+                                        
+                                        @media(max-width:904px) {
+                                            .boxis {
+                                                min-width: 15rem;
+                                                font-size: 1rem;
+                                                margin: 3% auto;
+                                            }
+                                            #contactsphoto {
+                                                margin-top: 1rem;
+                                                min-width: 15rem;
+                                                min-height: 17rem;
+                                            }
+                                            .header>a {
+                                                font-size: 1rem;
+                                                margin: 1.5rem;
+                                            }
+                                            #adaptationfoot1>a {
+                                                font-size: .98rem;
+                                            }
+                                            .f {
+                                                font-size: 1.4rem;
+                                                margin: .3rem auto;
+                                            }
+                                            .bodygrid {
+                                                grid-template-columns: repeat(3, minmax(5rem, 20rem));
+                                                grid-template-rows: repeat(14, minmax(7rem, 25rem));
+                                            }
+                                            #popup_content {
+                                                max-width: 15rem;
+                                                max-height: 15rem;
+                                                min-height: 20rem;
+                                                min-width: 15rem;
+                                                vertical-align: middle;
+                                            }
+                                            #imgtext {
+                                                max-width: 15rem;
+                                                max-height: 15rem;
+                                                min-height: 20rem;
+                                                min-width: 15rem;
+                                            }
+                                            #popup_text1 {
+                                                max-width: 10rem;
+                                                min-width: 10rem;
+                                                min-height: 20rem;
+                                            }
+                                        }
+                                        
+                                        @media(min-width:540px) {
+                                            #adaptatio22 {
+                                                display: none;
+                                            }
+                                            #adaptatio5 {
+                                                display: none;
+                                            }
+                                        }
+                                        
+                                        #adaptationfoot2 {
+                                            display: none;
+                                        }
+                                        
+                                        @media(max-width:720px) {
+                                            #services2 {
+                                                font-size: 1rem;
+                                            }
+                                            #services3 {
+                                                font-size: 2rem;
+                                            }
+                                            #services4 {
+                                                font-size: 2rem;
+                                            }
+                                            #firstblock2 {
+                                                height: 3.5rem;
+                                            }
+                                            #adaptationfoot2>a {
+                                                font-size: .8rem;
+                                                margin: auto auto;
+                                            }
+                                            #adaptationfoot2 {
+                                                display: inline;
+                                            }
+                                            #adaptationfoot1 {
+                                                display: none;
+                                            }
+                                            #adaptationfoot3 {
+                                                display: none;
+                                            }
+                                            .gwrap {
+                                                width: 50%;
+                                            }
+                                            #s {
+                                                font-size: .5rem;
+                                            }
+                                            #t {
+                                                font-size: .4rem;
+                                            }
+                                            .f {
+                                                font-size: 1.2rem;
+                                                margin: .3rem auto;
+                                            }
+                                            .bodygrid {
+                                                grid-template-columns: repeat(2, minmax(5rem, 20rem));
+                                                grid-template-rows: repeat(20, minmax(7rem, 25rem));
+                                            }
+                                            .firstimage2 {
+                                                max-width: 33rem;
+                                                max-height: 30rem;
+                                                min-width: 33rem;
+                                                min-height: 30rem;
+                                            }
+                                            .secondimage2 {
+                                                max-width: 33rem;
+                                                max-height: 30rem;
+                                                min-width: 33rem;
+                                                min-height: 30rem;
+                                            }
+                                            .thirdimage2 {
+                                                max-width: 33rem;
+                                                max-height: 30rem;
+                                                min-width: 33rem;
+                                                min-height: 30rem;
+                                            }
+                                        }
+                                        
+                                        #headeradaptiv {
+                                            display: none;
+                                        }
+                                        
+                                        @media(max-width: 720px) {
+                                            .boxis {
+                                                min-width: 12rem;
+                                                font-size: .7rem;
+                                                margin: 3% auto;
+                                            }
+                                            #contactsphoto {
+                                                margin-top: 1rem;
+                                                min-width: 10rem;
+                                                min-height: 12rem;
+                                            }
+                                            .header>a {
+                                                font-size: .7rem;
+                                            }
+                                            #s {
+                                                font-size: .3rem;
+                                            }
+                                            #t {
+                                                font-size: .2rem;
+                                            }
+                                            .f {
+                                                font-size: .8rem;
+                                                margin: .3rem auto;
+                                            }
+                                            .firstimage2 {
+                                                max-width: 25rem;
+                                                max-height: 20rem;
+                                                min-width: 25rem;
+                                                min-height: 20rem;
+                                            }
+                                            .secondimage2 {
+                                                max-width: 25rem;
+                                                max-height: 20rem;
+                                                min-width: 25rem;
+                                                min-height: 20rem;
+                                            }
+                                            .thirdimage2 {
+                                                max-width: 25rem;
+                                                max-height: 20rem;
+                                                min-width: 25rem;
+                                                min-height: 20rem;
+                                            }
+                                            .firstimage1 {
+                                                max-width: 25rem;
+                                                max-height: 20rem;
+                                                margin: 0 auto;
+                                                margin-top: .7rem;
+                                            }
+                                            #adaptatio33 {
+                                                display: none;
+                                            }
+                                            #adaptatio11 {
+                                                display: inline;
+                                            }
+                                            #adaptatio111 {
+                                                display: none;
+                                            }
+                                            #adaptatio222 {
+                                                display: inline;
+                                            }
+                                            #popup_content {
+                                                max-width: 15rem;
+                                                max-height: 15rem;
+                                                min-height: 20rem;
+                                                min-width: 15rem;
+                                            }
+                                            #imgtext {
+                                                max-width: 15rem;
+                                                max-height: 15rem;
+                                                min-height: 20rem;
+                                                min-width: 15rem;
+                                            }
+                                            #popup_text1 {
+                                                max-width: 10rem;
+                                                min-width: 10rem;
+                                                min-height: 20rem;
+                                            }
+                                        }
+                                        
+                                        @media(max-width:540px) {
+                                            #services2 {
+                                                font-size: .6rem;
+                                            }
+                                            #services3 {
+                                                font-size: 1.3rem;
+                                            }
+                                            #services4 {
+                                                font-size: 1.3rem;
+                                            }
+                                            .boxis {
+                                                min-width: 5rem;
+                                                font-size: .4rem;
+                                                margin: 3% auto;
+                                            }
+                                            #contactsphoto {
+                                                margin-top: 1rem;
+                                                min-width: 5rem;
+                                                min-height: 7rem;
+                                            }
+                                            #firstblock2 {
+                                                height: 2rem;
+                                            }
+                                            .header>a {
+                                                font-size: .5rem;
+                                                margin: .1rem;
+                                            }
+                                            #s {
+                                                font-size: .1rem;
+                                            }
+                                            #t {
+                                                font-size: .1rem;
+                                            }
+                                            .f {
+                                                font-size: .5rem;
+                                                margin: .2rem auto;
+                                            }
+                                            #adaptatio11 {
+                                                display: none;
+                                            }
+                                            #adaptatio22 {
+                                                display: inline;
+                                            }
+                                            #adaptatio222 {
+                                                display: none;
+                                            }
+                                            #adaptatio333 {
+                                                display: inline;
+                                            }
+                                            .firstimage2 {
+                                                max-width: 15.7rem;
+                                                max-height: 12rem;
+                                                min-width: 15.7rem;
+                                                min-height: 12rem;
+                                            }
+                                            .secondimage2 {
+                                                max-width: 15.7rem;
+                                                max-height: 12rem;
+                                                min-width: 15.7rem;
+                                                min-height: 12rem;
+                                            }
+                                            .thirdimage2 {
+                                                max-width: 15.7rem;
+                                                max-height: 12rem;
+                                                min-width: 15.7rem;
+                                                min-height: 12rem;
+                                            }
+                                            .header {
+                                                margin-top: .3rem;
+                                                margin-bottom: .3rem;
+                                            }
+                                            .footer2 {
+                                                min-height: .3rem;
+                                                max-height: 10rem;
+                                            }
+                                            .bodygrid {
+                                                grid-template-columns: repeat(1, minmax(5rem, 20rem));
+                                                grid-template-rows: repeat(40, minmax(7rem, 25rem));
+                                            }
+                                            @media(max-width:250px) {
+                                                .header>a {
+                                                    font-size: .2rem;
+                                                    margin: .09rem;
+                                                }
+                                                .footer2 {
+                                                    min-height: .2rem;
+                                                    max-height: 10rem;
+                                                }
+                                                #adaptationfoot2>a {
+                                                    font-size: 7px;
+                                                    margin: auto auto;
+                                                }
+                                            }
